@@ -4,7 +4,8 @@
   "description": "pwa app with web-components using polymer and lit-html",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,19 @@
   "devDependencies": {
     "@polymer/polymer": "^3.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.7",
-    "lit-element": "^2.0.1"
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "css-loader": "^2.1.0",
+    "lit-element": "^2.0.1",
+    "memoize-decorator": "^1.0.2",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "lodash-decorators": "^6.0.1"
   }
 }
