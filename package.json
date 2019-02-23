@@ -1,0 +1,31 @@
+{
+  "name": "lit-pwa",
+  "version": "0.1.0",
+  "description": "pwa with web components using polymer with lit-html",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@polymer/polymer": "^3.1.0",
+    "@webcomponents/webcomponentsjs": "^2.2.7",
+    "lit-element": "^2.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MostafaYehia/lit-pwa.git"
+  },
+  "keywords": [
+    "polymer",
+    "lit-html",
+    "pwa",
+    "web-components"
+  ],
+  "author": "Mostafa Yehia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MostafaYehia/lit-pwa/issues"
+  },
+  "homepage": "https://github.com/MostafaYehia/lit-pwa#readme"
+}
