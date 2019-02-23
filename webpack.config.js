@@ -1,20 +1,42 @@
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/main.ts',
+  entry: {
+    app: './src/app.ts',
+    navbar: './src/components/navbar.ts'
+  },
   mode: 'production',
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  },
   module: {
     // Loaders
     rules: [{
-      test: /\.ts$/,
+      test: /\.tsx?$/,
       use: 'ts-loader'
+    },
+    {
+      test: /\.scss$/,
+      use: [
+        process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+        "css-loader", // translates CSS into CommonJS
+        "sass-loader" // compiles Sass to CSS, using Node Sass by default
+      ]
     }]
   },
-  plugins: [],
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      title: 'PWA with web components',
+      template: './index.html'
+    })
+  ],
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
   optimization: {}
