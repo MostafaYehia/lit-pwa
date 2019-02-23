@@ -7,7 +7,7 @@ export class CoNavBar extends LitElement {
   // This decorator creates a property accessor that triggers rendering and
   // an observed attribute.
   @property()
-  mood = 'great';
+  title = 'Navbar';
 
   static styles = css`
     span {
@@ -16,7 +16,9 @@ export class CoNavBar extends LitElement {
 
   // Render element DOM by returning a `lit-html` template.
   render() {
-    return html`Web Components are <span>${this.mood}</span>!`;
+    return html`
+      <h2>${this.title}</h2>!
+      `;
   }
 
 }
