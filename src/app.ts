@@ -1,5 +1,6 @@
+const scss = require("../main.scss");
+import * as NavbarComponent from "./components/navbar.component";
 
-import { CoNavBar } from "./components/navbar";
 import { LitElement, html, css, customElement, property } from 'lit-element';
 
 // This decorator defines the element.
@@ -7,18 +8,37 @@ import { LitElement, html, css, customElement, property } from 'lit-element';
 export class App extends LitElement {
 
   @property()
-  title = "Web components world"
+  title = `
+  This project has been created 
+  website from scratch using webpack bundler and 
+  custom web components using polymer & lit-html,
+  I'm also use server workers to make it as offline-first
+  app using variant strategies
+  `
 
   static styles = css`
-    .title {
-      color: green;
+
+    .container {
+      background: white;
+      height: 100vh;
+      text-align:center;
+    }
+
+    .description {
+      position: relative;
+      color: grey;
+      margin: auto;
+      margin-top: 50px;
+      max-width: 520px;
     }`;
 
   // Render element DOM by returning a `lit-html` template.
   render() {
     return html`
-        <co-navbar title="Navbar"></co-navbar>
-        <h1 class="title">${this.title}</h1>
+          <div class="container">
+            <co-navbar title="Lit-Components"></co-navbar>
+            <p class="description">${this.title}</p>
+          </div>
       `;
   }
 
