@@ -15,9 +15,9 @@ export class App extends LitElement {
   I'm also use server workers to make it as offline-first
   app using variant strategies
   `
+  
 
   static styles = css`
-
     .container {
       background: white;
       height: 100vh;
